@@ -33,7 +33,7 @@ gh auth login
 ## Step 2　在 Vercel 建專案
 
 1. 到 <https://vercel.com/> 用 **GitHub 帳號**登入（不用另外註冊）
-2. `Add New...` → `Project` → 選 `card-booking` 這個 repo → `Import`
+2. `Add New...` → `Project` → 選 `card-booking` 這個 repo（Vercel 專案名為 `terry-booking`） → `Import`
 3. **先不要按 Deploy**，先展開 `Environment Variables`，把下面四個貼進去
 
 | Name | Value |
@@ -113,3 +113,16 @@ gh auth login
 | 確認信連結指回 localhost | `APPOINTMENT_BASE_URL` 忘了改 |
 | 後台顯示「權限不足」 | 正常，還沒設 `AUTH_*` |
 | 頁面整個掛掉 | 去 Vercel 的 `Logs` 看紅字 |
+
+---
+
+## 實際部署資訊（2026-09-10）
+
+| 項目 | 值 |
+|---|---|
+| GitHub repo | `TerryPan1981/card-booking` |
+| Vercel 專案 | `terry-booking`（Team: terry，Hobby 免費方案） |
+| 資料庫 | TiDB Cloud Starter，Instance `Terry`，Tokyo，database `test` |
+
+Vercel 只會在 `main` 分支收到新 commit 時才重新部署。
+手動想重跑：Vercel → Deployments → 最新那筆 → `⋯` → `Redeploy`。
