@@ -126,3 +126,8 @@ gh auth login
 
 Vercel 只會在 `main` 分支收到新 commit 時才重新部署。
 手動想重跑：Vercel → Deployments → 最新那筆 → `⋯` → `Redeploy`。
+
+### 密碼輪替紀錄
+- 2026-09-10：TiDB 密碼已輪替一次，Vercel 的 `DATABASE_URL` 同步更新。
+  `APPOINTMENT_BASE_URL` 同時由 `http://localhost:3000` 改為 `https://terry-booking.vercel.app`。
+  ⚠️ 改完環境變數一定要重新部署（推 commit 到 main，或 Deployments → `⋯` → Redeploy），否則不會生效。
